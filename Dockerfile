@@ -10,3 +10,4 @@ RUN echo "${SHA256}  ${TOOL}_${VERSION}_linux_amd64.zip" | sha256sum -cw &&\
     rm -r ${TOOL}_${VERSION}_linux_amd64.zip
 
 ENTRYPOINT ["/consul-template"]
+CMD ["--help"]
