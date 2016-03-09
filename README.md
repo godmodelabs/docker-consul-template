@@ -1,4 +1,4 @@
-# docker-consul-template
+# docker-hashicorp-consul-template
 A busybox:glibc based Docker container running HashiCorp's consul-template on CoreOS instances.
 
 ## From cloud-config
@@ -15,6 +15,8 @@ coreos:
         Documentation=Rhttps://github.com/hashicorp/consul-template/blob/master/README.md
         [Service]
         Restart=always
-        ExecStart=/usr/bin/docker run --rm --net=host --name consul-template godmodelabs/consul-template
+        ExecStart=/usr/bin/docker run --rm --name consul-template \
+          --net=host \
+          godmodelabs/hashicorp-consul-template
         ExecStop=-/usr/bin/docker stop consul-template
 ```
