@@ -12,7 +12,7 @@ coreos:
       content: |
         [Unit]
         Description=HashiCorp consul-template service
-        Documentation=Rhttps://github.com/hashicorp/consul-template/blob/master/README.md
+        Documentation=https://github.com/hashicorp/consul-template/blob/master/README.md
         [Service]
         Restart=always
         ExecStart=/usr/bin/docker run --rm --name consul-template \
